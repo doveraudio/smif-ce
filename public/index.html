@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>jQuery UI Resizable - Demo functionality</title>
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+        <script src="/libraries/js/jquery-2.1.1.js"></script>
+        <script src="/libraries/js/jquery-ui.js"></script>
+        <script src="/libraries/js/bootstrap.js"></script>
+
+        <link rel="stylesheet" href="/libraries/css/bootstrap.css">
+        <link rel="stylesheet" href="/libraries/css/jquery-ui.css">
+        <link rel="stylesheet" href="/libraries/css/jquery-ui.structure.css">
+        <style>
+            .module-panel {  width: 97pt; height: 117pt; padding: .5pt; border-radius:5pt;}
+            .module-header { border-radius: 5pt; height:20pt; background-color: #7575c5}
+            .module-element h3 { display:block; position: relative; text-align: center; margin: 0pt; }
+            .module-container {  width:100%; height:40em; background:#4f6f4f; }
+            .module-header-control { width:12pt; height:16pt; min-width:12pt; min-height:16pt; max-height:16pt; margin:0; padding:0;}
+
+        </style>
+        <script>
+            $(function () {
+                $(".module-panel")
+                        .resizable
+                        (
+                                {
+                                    containment: ".module-container",
+                                    maxHeight: 320,
+                                    maxWidth: 640,
+                                    minHeight: 160,
+                                    minWidth: 120,
+                                    grid: 16
+                                }
+                        )
+                        .draggable
+                        (
+                                {
+                                    containment: ".module-container",
+                                    grid: [4, 4]
+
+                                }
+                        );
+            });
+        </script>
+    </head>
+    <body>
+
+        <div class='module-element module-container ui-widget-content container-fluid'> 
+
+
+            <div id="demo-module" class="ui-widget-content module-panel">
+                <div class="ui-widget-header module-header">Demo Module 
+                    <div class="module-header-control btn btn-default pull-right"><span class='' >x</span></div>
+                    <div class="module-header-control btn btn-default pull-right"><span class='' >-</span></div>
+                    <div class="module-header-control btn btn-default pull-right"><span class='' >[ ]</span></div>
+                </div>
+                    
+
+                        </div>
+                    </div>
+        
+    </body>
+</html>
+
